@@ -4,21 +4,24 @@ extends Camera2D
 ## middle-mouse drag or two-finger trackpad swipe to pan.
 
 @export var pan_speed := 900.0
-@export var edge_margin := 12.0
+@export var edge_margin := 8.0
 @export var zoom_min := 0.35
 @export var zoom_max := 2.0
 @export var zoom_step := 0.1
-@export var map_path: NodePath = ^"../IsoMap"
 
 var _dragging := false
 var _bounds := Rect2()
 
 
-func _ready() -> void:
-	var map := get_node(map_path)
-	_bounds = map.map_bounds()
+func setup(bounds: Rect2) -> void:
+	_bounds = bounds
 	position = _bounds.get_center()
 	make_current()
+
+
+func focus_on(world_pos: Vector2) -> void:
+	position = world_pos
+	_clamp_to_map()
 
 
 func _process(delta: float) -> void:

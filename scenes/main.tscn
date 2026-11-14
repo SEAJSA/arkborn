@@ -1,24 +1,42 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=10 format=3]
 
-[ext_resource type="Script" path="res://src/presentation/iso_map.gd" id="1_map"]
-[ext_resource type="Script" path="res://src/presentation/rts_camera.gd" id="2_cam"]
-[ext_resource type="Script" path="res://src/presentation/debug_hud.gd" id="3_hud"]
+[ext_resource type="Script" path="res://src/presentation/game.gd" id="1_game"]
+[ext_resource type="Script" path="res://src/presentation/iso_map.gd" id="2_map"]
+[ext_resource type="Script" path="res://src/presentation/resource_layer.gd" id="3_res"]
+[ext_resource type="Script" path="res://src/presentation/entity_layer.gd" id="4_ent"]
+[ext_resource type="Script" path="res://src/presentation/input_controller.gd" id="5_input"]
+[ext_resource type="Script" path="res://src/presentation/rts_camera.gd" id="6_cam"]
+[ext_resource type="Script" path="res://src/presentation/hud/hud.gd" id="7_hud"]
+[ext_resource type="Script" path="res://src/presentation/debug_hud.gd" id="8_debug"]
+[ext_resource type="Script" path="res://src/presentation/fog_layer.gd" id="9_fog"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_game")
 
 [node name="IsoMap" type="Node2D" parent="."]
-script = ExtResource("1_map")
+script = ExtResource("2_map")
+
+[node name="ResourceLayer" type="Node2D" parent="."]
+script = ExtResource("3_res")
+
+[node name="EntityLayer" type="Node2D" parent="."]
+script = ExtResource("4_ent")
+
+[node name="FogLayer" type="Node2D" parent="."]
+script = ExtResource("9_fog")
+
+[node name="InputController" type="Node2D" parent="."]
+script = ExtResource("5_input")
 
 [node name="RtsCamera" type="Camera2D" parent="."]
-script = ExtResource("2_cam")
+script = ExtResource("6_cam")
 
 [node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("7_hud")
 
 [node name="DebugLabel" type="Label" parent="HUD"]
-offset_left = 12.0
-offset_top = 8.0
-offset_right = 900.0
-offset_bottom = 34.0
+offset_right = 600.0
+offset_bottom = 26.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-script = ExtResource("3_hud")
+script = ExtResource("8_debug")

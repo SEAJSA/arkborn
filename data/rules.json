@@ -1,0 +1,138 @@
+{
+  "map_size": 192,
+  "max_pop": 200,
+  "train_queue_limit": 5,
+  "players": [
+    {
+      "name": "Your People",
+      "ai": false
+    },
+    {
+      "name": "Rival Tribe",
+      "ai": true
+    }
+  ],
+  "start_spots": [
+    [
+      0.3,
+      0.7
+    ],
+    [
+      0.7,
+      0.3
+    ],
+    [
+      0.3,
+      0.3
+    ],
+    [
+      0.7,
+      0.7
+    ],
+    [
+      0.5,
+      0.15
+    ],
+    [
+      0.5,
+      0.85
+    ],
+    [
+      0.15,
+      0.5
+    ],
+    [
+      0.85,
+      0.5
+    ]
+  ],
+  "start_building": "town_center",
+  "start_villagers": 3,
+  "start_stock": {
+    "food": 200,
+    "wood": 200,
+    "stone": 150,
+    "metal": 100
+  },
+  "start_kit": [
+    {
+      "resource": "berry_bush",
+      "count": 6,
+      "distance": 7
+    },
+    {
+      "resource": "stone_pile",
+      "count": 5,
+      "distance": 10
+    },
+    {
+      "resource": "metal_vein",
+      "count": 5,
+      "distance": 10
+    },
+    {
+      "resource": "tree",
+      "count": 28,
+      "distance": 11
+    }
+  ],
+  "resource_spawns": [
+    {
+      "resource": "tree",
+      "terrain": "forest",
+      "per_mille": 850,
+      "cluster": 1
+    },
+    {
+      "resource": "tree",
+      "terrain": "grass",
+      "per_mille": 10,
+      "cluster": 1
+    },
+    {
+      "resource": "berry_bush",
+      "terrain": "grass",
+      "per_mille": 2,
+      "cluster": 5
+    },
+    {
+      "resource": "stone_pile",
+      "terrain": "hills",
+      "per_mille": 4,
+      "cluster": 5
+    },
+    {
+      "resource": "metal_vein",
+      "terrain": "hills",
+      "per_mille": 4,
+      "cluster": 5
+    }
+  ],
+  "ai": {
+    "think_interval": 1.0,
+    "villager_target": 22,
+    "gather_mix": {
+      "food": 50,
+      "wood": 42,
+      "stone": 3,
+      "metal": 5
+    },
+    "lodge_at_villagers": 8,
+    "military_mix": [
+      "clubman",
+      "clubman",
+      "slinger"
+    ],
+    "first_attack_minute": 8,
+    "attack_interval_minutes": 4,
+    "wave_sizes": [
+      5,
+      7,
+      9,
+      12,
+      15,
+      18
+    ],
+    "defend_radius": 14
+  }
+}

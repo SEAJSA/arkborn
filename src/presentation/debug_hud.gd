@@ -1,20 +1,20 @@
 extends Label
-## Temporary on-screen readout: seed, tile under the mouse, terrain, FPS.
-## Replaced by the AoE2-style top bar in Milestone 2.
+## Developer readout, toggled with F12: seed, tick, tile under the mouse, terrain, FPS.
 
-@export var map_path: NodePath = ^"../../IsoMap"
-
-var _map: Node2D
+var game: Node
 
 
 func _ready() -> void:
-	_map = get_node(map_path)
+	visible = false
 
 
 func _process(_delta: float) -> void:
-	var t: Vector2i = _map.world_to_tile(_map.get_global_mouse_position())
+	if not visible or game == null:
+		return
+	var sim: SimWorld = game.sim
+	var t: Vector2i = game.iso_map.world_to_tile(game.iso_map.get_global_mouse_position())
 	var terrain := "-"
-	if _map.in_bounds(t):
-		terrain = _map.terrain_name_at(t)
-	text = "Arkborn prototype   |   seed %d   |   tile %d, %d   %s   |   %d FPS" % [
-		_map.world_seed, t.x, t.y, terrain, Engine.get_frames_per_second()]
+	if sim.in_bounds(t):
+		terrain = sim.terrain_id_at(t)
+	text = "seed %d   tick %d   tile %d, %d %s   %d FPS" % [
+		sim.world_seed, sim.tick, t.x, t.y, terrain, Engine.get_frames_per_second()]

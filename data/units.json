@@ -1,0 +1,30 @@
+{
+  "units": [
+    {
+      "id": "villager", "name": "Villager", "hotkey": "Q",
+      "hp": 25, "speed": 0.8, "los": 4,
+      "attack": 3, "building_attack": 3, "armor": 0, "range": 0, "reload": 2.0,
+      "carry": 10, "can_build": true,
+      "gather_rate": { "food": 0.35, "wood": 0.40, "stone": 0.36, "metal": 0.38 },
+      "cost": { "food": 50 }, "train_time": 25, "pop": 1
+    },
+    {
+      "id": "clubman", "name": "Clubman", "hotkey": "Q",
+      "hp": 40, "speed": 0.9, "los": 5, "military": true,
+      "attack": 4, "building_attack": 6, "armor": 1, "range": 0, "reload": 2.0,
+      "cost": { "food": 50, "wood": 20 }, "train_time": 21, "pop": 1
+    },
+    {
+      "id": "slinger", "name": "Slinger", "hotkey": "E",
+      "hp": 30, "speed": 0.95, "los": 6, "military": true,
+      "attack": 4, "building_attack": 1, "armor": 0, "range": 4, "reload": 2.0,
+      "cost": { "food": 25, "wood": 40 }, "train_time": 30, "pop": 1
+    },
+    {
+      "id": "runner", "name": "Runner", "hotkey": "R",
+      "hp": 45, "speed": 1.4, "los": 8, "military": true,
+      "attack": 3, "building_attack": 2, "armor": 0, "range": 0, "reload": 2.0,
+      "cost": { "food": 80 }, "train_time": 30, "pop": 1
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "buildings": [
+    {
+      "id": "house", "name": "House", "hotkey": "Q",
+      "size": 2, "hp": 550, "armor": 2, "los": 3, "pop": 5, "dropoff": [], "trains": [],
+      "cost": { "wood": 25 }, "build_time": 25,
+      "height": 24, "roof_height": 18, "wall": "#a58a62", "roof": "#8b3f2a"
+    },
+    {
+      "id": "farm", "name": "Farm", "hotkey": "C",
+      "size": 2, "hp": 300, "armor": 0, "los": 2, "pop": 0, "dropoff": [], "trains": [],
+      "field": { "res_type": "food", "amount": 250 },
+      "cost": { "wood": 60 }, "build_time": 15,
+      "height": 0, "roof_height": 0, "wall": "#7a5a34", "roof": "#c9a43a"
+    },
+    {
+      "id": "woodcutters_hut", "name": "Woodcutter's Hut", "hotkey": "E",
+      "size": 2, "hp": 600, "armor": 2, "los": 3, "pop": 0, "dropoff": ["wood"], "trains": [],
+      "cost": { "wood": 100 }, "build_time": 35,
+      "height": 20, "roof_height": 12, "wall": "#7a5634", "roof": "#5a3d22"
+    },
+    {
+      "id": "food_store", "name": "Food Store", "hotkey": "R",
+      "size": 2, "hp": 600, "armor": 2, "los": 3, "pop": 0, "dropoff": ["food"], "trains": [],
+      "cost": { "wood": 100 }, "build_time": 35,
+      "height": 20, "roof_height": 14, "wall": "#b49a6a", "roof": "#c9a43a"
+    },
+    {
+      "id": "quarry_camp", "name": "Quarry Camp", "hotkey": "F",
+      "size": 2, "hp": 600, "armor": 2, "los": 3, "pop": 0, "dropoff": ["stone", "metal"], "trains": [],
+      "cost": { "wood": 100 }, "build_time": 35,
+      "height": 18, "roof_height": 8, "wall": "#8a8a84", "roof": "#5c5c58"
+    },
+    {
+      "id": "war_lodge", "name": "War Lodge", "hotkey": "G",
+      "size": 3, "hp": 1200, "armor": 2, "los": 5, "pop": 0, "dropoff": [], "trains": ["clubman", "slinger", "runner"],
+      "cost": { "wood": 175 }, "build_time": 50,
+      "height": 28, "roof_height": 22, "wall": "#6e4a36", "roof": "#3f2a1e"
+    },
+    {
+      "id": "town_center", "name": "Town Center", "hotkey": "T",
+      "size": 4, "hp": 2400, "armor": 3, "los": 8, "pop": 5, "dropoff": ["food", "wood", "stone", "metal"], "trains": ["villager"],
+      "attack": 5, "range": 7, "reload": 2.0,
+      "cost": { "wood": 275, "stone": 100 }, "build_time": 150,
+      "height": 40, "roof_height": 42, "wall": "#b9a27a", "roof": "#7d4f32"
+    }
+  ]
+}

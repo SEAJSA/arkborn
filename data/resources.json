@@ -1,0 +1,14 @@
+{
+  "resource_types": [
+    { "id": "food",  "name": "Food",  "color": "#d8503f" },
+    { "id": "wood",  "name": "Wood",  "color": "#a0693a" },
+    { "id": "stone", "name": "Stone", "color": "#b4b4ac" },
+    { "id": "metal", "name": "Metal", "color": "#e0b84a" }
+  ],
+  "resources": [
+    { "id": "tree",       "name": "Tree",       "res_type": "wood",  "amount": 100, "color": "#2f6a3a" },
+    { "id": "berry_bush", "name": "Berry Bush", "res_type": "food",  "amount": 125, "color": "#3f7a33" },
+    { "id": "stone_pile", "name": "Stone",      "res_type": "stone", "amount": 350, "color": "#9a9a92" },
+    { "id": "metal_vein", "name": "Metal Vein", "res_type": "metal", "amount": 400, "color": "#5e5144" }
+  ]
+}
