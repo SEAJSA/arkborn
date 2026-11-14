@@ -1,0 +1,11 @@
+.DS_Store
+config.env
+*.log
+*.out
+.env
+
+# Godot
+.godot/
+/builds/
+/export/
+*.tmp

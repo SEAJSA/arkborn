@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/presentation/iso_map.gd" id="1_map"]
+[ext_resource type="Script" path="res://src/presentation/rts_camera.gd" id="2_cam"]
+[ext_resource type="Script" path="res://src/presentation/debug_hud.gd" id="3_hud"]
+
+[node name="Main" type="Node2D"]
+
+[node name="IsoMap" type="Node2D" parent="."]
+script = ExtResource("1_map")
+
+[node name="RtsCamera" type="Camera2D" parent="."]
+script = ExtResource("2_cam")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="DebugLabel" type="Label" parent="HUD"]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 900.0
+offset_bottom = 34.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+script = ExtResource("3_hud")

@@ -1,0 +1,11 @@
+{
+  "terrain": [
+    { "id": "deep_water", "name": "Deep water", "max_height": 0.30, "color": "#1f3f66" },
+    { "id": "shallows",   "name": "Shallows",   "max_height": 0.38, "color": "#3a6e96" },
+    { "id": "sand",       "name": "Sand",       "max_height": 0.42, "color": "#c9b47a" },
+    { "id": "grass",      "name": "Grassland",  "max_height": 0.60, "color": "#5f8f3e" },
+    { "id": "forest",     "name": "Forest",     "max_height": 0.72, "color": "#2f5e2a" },
+    { "id": "hills",      "name": "Hills",      "max_height": 0.82, "color": "#7a6a4f" },
+    { "id": "mountain",   "name": "Mountain",   "max_height": 1.00, "color": "#9a9a9a" }
+  ]
+}
